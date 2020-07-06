@@ -11,7 +11,7 @@
     <title>Przywitanie</title>
 </head>
 <body>
-    <h1>Cześć</h1>
-        <p>Jest godzina ${dateTime}</p>
+    <h1> Cześć </h1>
+        <p> Zapraszam do wypożyczalni samochodów  </p>
 </body>
 </html>
