@@ -14,8 +14,8 @@ public class Car {
     private Integer productionDate;
     private String color;
     private Integer carMileage;
-    private String carStatus;
-    private Integer pricePerDay;
+    //private String carStatus;
+    //private Integer pricePerDay;
 
     public Car() {
     }
@@ -75,7 +75,7 @@ public class Car {
     public void setCarMileage(Integer carMileage) {
         this.carMileage = carMileage;
     }
-
+/*
     public String getCarStatus() {
         return carStatus;
     }
@@ -91,4 +91,6 @@ public class Car {
     public void setPricePerDay(Integer pricePerDay) {
         this.pricePerDay = pricePerDay;
     }
+
+ */
 }

@@ -20,13 +20,18 @@ public class CarService {
         this.carRepository = carRepository;
     }
 
-    public List<CarDto> getAllCar() {
+    public List<CarDto> getAllCars() {
         Iterable<Car> carsList = carRepository.findAll();
         ArrayList<CarDto> result = new ArrayList<>();
         for(Car car : carsList) {
             result.add(CarMapper.INSTANCE.carToDto(car));
         }
         return result;
+    }
+
+    public void saveCar(CarDto carDto) {
+        Car car = CarMapper.INSTANCE.dtoToCar(carDto);
+        carRepository.save(car);
     }
 
 }

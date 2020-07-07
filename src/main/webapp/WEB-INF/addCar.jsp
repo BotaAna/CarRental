@@ -15,7 +15,7 @@
     <form method="post" action="/addCar">
         Marka: <input name="make" /><br/>
         Model: <input name="model" /><br/>
-        Color: <input name="color" /><br/>
+        Kolor: <input name="color" /><br/>
         Rodzaj nadwozia: <input name="carBody" /><br/>
         Data produkcji: <input name="productionDate" /><br/>
         Przebieg startowy: <input name="carMileage" /><br/>

@@ -9,8 +9,8 @@ public class CarDto {
     private Integer productionDate;
     private String color;
     private Integer carMileage;
-    private String carStatus;
-    private Integer pricePerDay;
+    //private String carStatus;
+    //private Integer pricePerDay;
 
     public CarDto() {
     }
@@ -70,7 +70,7 @@ public class CarDto {
     public void setCarMileage(Integer carMileage) {
         this.carMileage = carMileage;
     }
-
+/*
     public String getCarStatus() {
         return carStatus;
     }
@@ -86,4 +86,6 @@ public class CarDto {
     public void setPricePerDay(Integer pricePerDay) {
         this.pricePerDay = pricePerDay;
     }
+
+ */
 }

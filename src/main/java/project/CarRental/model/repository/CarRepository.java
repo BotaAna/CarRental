@@ -6,4 +6,5 @@ import project.CarRental.model.entity.Car;
 
 @Repository
 public interface CarRepository extends CrudRepository<Car, Integer> {
+
 }
