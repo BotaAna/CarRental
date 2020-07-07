@@ -9,6 +9,7 @@ import project.CarRental.model.repository.CarRepository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CarService {
@@ -29,9 +30,21 @@ public class CarService {
         return result;
     }
 
+    public CarDto getCarById(Integer id) {
+        Optional<Car> car = carRepository.findById(id);
+        if(car.isPresent()) {
+            return CarMapper.INSTANCE.carToDto(car.get());
+        }
+        return null;
+    }
+
     public void saveCar(CarDto carDto) {
         Car car = CarMapper.INSTANCE.dtoToCar(carDto);
         carRepository.save(car);
+    }
+
+    public void deleteCarById(Integer id) {
+        carRepository.deleteById(id);
     }
 
 }

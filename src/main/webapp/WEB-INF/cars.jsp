@@ -37,6 +37,8 @@
             <td>${car.carBody}</td>
             <td>${car.productionDate}</td>
             <td>${car.carMileage}</td>
+            <td><a href="/deleteCar?id=${car.id}">Usuń</a></td>
+            <td><a href="/editCar?id=${car.id}">Edytuj</a></td>
         </tr>
     </c:forEach>
 </table>

@@ -10,7 +10,7 @@ public class CompanyDto {
     private String companyContactAddress;
     private String companyOwner;
     //companyLogotype;
-    //private List<DepartmentDto> department = Collections.emptyList();
+    private List<DepartmentDto> department = Collections.emptyList();
 
 
     public CompanyDto() {
@@ -46,5 +46,13 @@ public class CompanyDto {
 
     public void setCompanyOwner(String companyOwner) {
         this.companyOwner = companyOwner;
+    }
+
+    public List<DepartmentDto> getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(List<DepartmentDto> department) {
+        this.department = department;
     }
 }

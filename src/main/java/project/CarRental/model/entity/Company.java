@@ -1,9 +1,9 @@
 package project.CarRental.model.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import project.CarRental.model.dto.DepartmentDto;
+
+import javax.persistence.*;
+import java.util.*;
 
 @Entity
 public class Company {
@@ -16,8 +16,8 @@ public class Company {
     private String companyContactAddress;
     private String companyOwner;
     //companyLogotype;
-    //private List<DepartmentDto> department = Collections.emptyList();
-
+    //@OneToMany(mappedBy = "department")
+    //private Set<Department> departments = new HashSet<>();
 
     public Integer getId() {
         return id;
@@ -58,4 +58,14 @@ public class Company {
     public void setCompanyOwner(String companyOwner) {
         this.companyOwner = companyOwner;
     }
+/*
+    public Set<Department> getDepartments() {
+        return departments;
+    }
+
+    public void setDepartments(Set<Department> departments) {
+        this.departments = departments;
+    }
+
+ */
 }

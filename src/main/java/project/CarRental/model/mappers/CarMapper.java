@@ -16,7 +16,7 @@ public interface CarMapper {
     Car dtoToCar(CarDto carDto);
 
     List<CarDto> carListToDto(List<Car> car);
-    List<Car> dtoToCar(List<CarDto> carDto);
+    List<Car> dtoToCarList(List<CarDto> carDto);
 
     List<CarDto> carIterableToDto(Iterable<Car> car);
     List<Car> dtoIterableToCar(Iterable<CarDto> carDto);

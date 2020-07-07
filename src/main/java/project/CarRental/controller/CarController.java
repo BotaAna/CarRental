@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import project.CarRental.model.dto.CarDto;
 import project.CarRental.service.CarService;
 
@@ -34,6 +35,26 @@ public class CarController {
     @PostMapping("/addCar")
     public String addCar(CarDto carDto) {
         carService.saveCar(carDto);
+        return "redirect:/cars";
+    }
+
+    @GetMapping("/editCar")
+    public String editCar(Model model,
+                              @RequestParam("id") Integer id) {
+        CarDto carDto = carService.getCarById(id);
+        model.addAttribute("car", carDto);
+        return "editCar";
+    }
+
+    @PostMapping("/editCar")
+    public String saveEditedCar(CarDto carDto) {
+        carService.saveCar(carDto);
+        return "redirect:/cars";
+    }
+
+    @GetMapping("/deleteCar")
+    public String deleteCar(@RequestParam("id") Integer id) {
+        carService.deleteCarById(id);
         return "redirect:/cars";
     }
 }
