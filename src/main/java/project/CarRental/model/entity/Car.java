@@ -17,6 +17,9 @@ public class Car {
     private String carStatus;
     private Integer pricePerDay;
 
+    public Car() {
+    }
+
     public Integer getId() {
         return Id;
     }

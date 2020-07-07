@@ -2,6 +2,7 @@ package project.CarRental.model.dto;
 
 public class CarDto {
 
+    private Integer id;
     private String make;
     private String model;
     private String carBody;
@@ -12,6 +13,14 @@ public class CarDto {
     private Integer pricePerDay;
 
     public CarDto() {
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getMake() {
