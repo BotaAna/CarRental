@@ -4,6 +4,7 @@ import java.util.Date;
 
 public class ReservationDto {
 
+    private Integer id;
     private Date reservationDate;
     private CustomerDto customer;
     private CarDto car;
@@ -13,6 +14,14 @@ public class ReservationDto {
     private DepartmentDto returnDepartment;
 
     public ReservationDto() {
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public Date getReservationDate() {

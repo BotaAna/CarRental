@@ -2,12 +2,21 @@ package project.CarRental.model.dto;
 
 public class EmployeeDto {
 
+    private Integer id;
     private String name;
     private String surname;
     private String department;
     private String employeeStatus;
 
     public EmployeeDto() {
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getName() {

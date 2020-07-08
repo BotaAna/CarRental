@@ -5,6 +5,7 @@ import java.util.List;
 
 public class CompanyDto {
 
+    private Integer id;
     private String companyName;
     private String companyDomain;
     private String companyContactAddress;
@@ -14,6 +15,14 @@ public class CompanyDto {
 
 
     public CompanyDto() {
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getCompanyName() {

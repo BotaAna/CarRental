@@ -2,12 +2,21 @@ package project.CarRental.model.dto;
 
 public class CustomerDto {
 
+    private Integer id;
     private String name;
     private String surname;
     private String address;
     private String email;
 
     public CustomerDto() {
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getName() {

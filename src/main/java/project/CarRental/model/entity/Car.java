@@ -7,7 +7,7 @@ public class Car {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer Id;
+    private Integer id;
     private String make;
     private String model;
     private String carBody;
@@ -21,11 +21,11 @@ public class Car {
     }
 
     public Integer getId() {
-        return Id;
+        return id;
     }
 
     public void setId(Integer id) {
-        Id = id;
+        id = id;
     }
 
     public String getMake() {
