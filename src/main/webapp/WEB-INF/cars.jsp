@@ -18,12 +18,15 @@
 <a href="/addCar">Dodaj auto</a>
 <table>
     <tr>
+
+        <th>ID</th>
         <th>Marka</th>
         <th>Model</th>
         <th>Kolor</th>
         <th>Rodzaj nadwozia</th>
         <th>Data produkcji</th>
         <th>Przebieg startowy</th>
+        <th>Status</th>
         <th></th>
         <th></th>
         <th></th>
@@ -31,12 +34,14 @@
 
     <c:forEach var="car" items="${carsList}">
         <tr>
+            <td>${car.id}</td>
             <td>${car.make}</td>
             <td>${car.model}</td>
             <td>${car.color}</td>
             <td>${car.carBody}</td>
             <td>${car.productionDate}</td>
             <td>${car.carMileage}</td>
+            <td>${car.carStatus}</td>
             <td><a href="/deleteCar?id=${car.id}">Usuń</a></td>
             <td><a href="/editCar?id=${car.id}">Edytuj</a></td>
         </tr>

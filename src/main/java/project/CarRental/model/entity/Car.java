@@ -1,6 +1,7 @@
 package project.CarRental.model.entity;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 
 @Entity
 public class Car {
@@ -14,8 +15,8 @@ public class Car {
     private Integer productionDate;
     private String color;
     private Integer carMileage;
-    //private String carStatus;
-    //private Integer pricePerDay;
+    private String carStatus;
+    private BigDecimal pricePerDay;
 
     public Car() {
     }
@@ -75,7 +76,7 @@ public class Car {
     public void setCarMileage(Integer carMileage) {
         this.carMileage = carMileage;
     }
-/*
+
     public String getCarStatus() {
         return carStatus;
     }
@@ -84,13 +85,11 @@ public class Car {
         this.carStatus = carStatus;
     }
 
-    public Integer getPricePerDay() {
+    public BigDecimal getPricePerDay() {
         return pricePerDay;
     }
 
-    public void setPricePerDay(Integer pricePerDay) {
+    public void setPricePerDay(BigDecimal pricePerDay) {
         this.pricePerDay = pricePerDay;
     }
-
- */
 }

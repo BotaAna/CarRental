@@ -1,5 +1,7 @@
 package project.CarRental.model.dto;
 
+import java.math.BigDecimal;
+
 public class CarDto {
 
     private Integer id;
@@ -9,8 +11,8 @@ public class CarDto {
     private Integer productionDate;
     private String color;
     private Integer carMileage;
-    //private String carStatus;
-    //private Integer pricePerDay;
+    private String carStatus;
+    private BigDecimal pricePerDay;
 
     public CarDto() {
     }
@@ -70,7 +72,7 @@ public class CarDto {
     public void setCarMileage(Integer carMileage) {
         this.carMileage = carMileage;
     }
-/*
+
     public String getCarStatus() {
         return carStatus;
     }
@@ -79,13 +81,11 @@ public class CarDto {
         this.carStatus = carStatus;
     }
 
-    public Integer getPricePerDay() {
+    public BigDecimal getPricePerDay() {
         return pricePerDay;
     }
 
-    public void setPricePerDay(Integer pricePerDay) {
+    public void setPricePerDay(BigDecimal pricePerDay) {
         this.pricePerDay = pricePerDay;
     }
-
- */
 }

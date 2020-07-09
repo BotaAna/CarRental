@@ -8,8 +8,8 @@ public class ReservationDto {
     private Date reservationDate;
     private CustomerDto customer;
     private CarDto car;
-    private Date dateFrom;
-    private Date dateTo;
+    private Date rentalDate;
+    private Date returnDate;
     private DepartmentDto rentalDepartment;
     private DepartmentDto returnDepartment;
 
@@ -49,19 +49,19 @@ public class ReservationDto {
     }
 
     public Date getDateFrom() {
-        return dateFrom;
+        return rentalDate;
     }
 
     public void setDateFrom(Date dateFrom) {
-        this.dateFrom = dateFrom;
+        this.rentalDate = dateFrom;
     }
 
     public Date getDateTo() {
-        return dateTo;
+        return returnDate;
     }
 
     public void setDateTo(Date dateTo) {
-        this.dateTo = dateTo;
+        this.returnDate = dateTo;
     }
 
     public DepartmentDto getRentalDepartment() {

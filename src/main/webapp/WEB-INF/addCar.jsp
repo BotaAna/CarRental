@@ -19,6 +19,7 @@
         Rodzaj nadwozia: <input name="carBody" /><br/>
         Data produkcji: <input name="productionDate" /><br/>
         Przebieg startowy: <input name="carMileage" /><br/>
+        Status: <input name="carStatus" /><br/>
         <input type="submit" value="Zapisz">
     </form>
 </body>
