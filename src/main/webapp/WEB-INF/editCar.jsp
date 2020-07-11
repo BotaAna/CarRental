@@ -19,7 +19,7 @@
         Rodzaj nadwozia: <input name="carBody" value="${car.carBody}" /><br/>
         Data produkcji: <input name="productionDate" value="${car.productionDate}" /><br/>
         Przebieg startowy: <input name="carMileage" value="${car.carMileage}" /><br/>
-        <input type name="id" value="${car.id}">
+        <input type="hidden" name="id" value="${car.id}">
         <input type="submit" value="Zapisz">
     </form>
 

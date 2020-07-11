@@ -27,6 +27,7 @@
         <th>Data produkcji</th>
         <th>Przebieg startowy</th>
         <th>Status</th>
+        <th>Cena za dzień</th>
         <th></th>
         <th></th>
         <th></th>
@@ -42,6 +43,7 @@
             <td>${car.productionDate}</td>
             <td>${car.carMileage}</td>
             <td>${car.carStatus}</td>
+            <td>${car.pricePerDay}</td>
             <td><a href="/deleteCar?id=${car.id}">Usuń</a></td>
             <td><a href="/editCar?id=${car.id}">Edytuj</a></td>
         </tr>
