@@ -19,7 +19,6 @@
 <table>
     <tr>
 
-        <th>ID</th>
         <th>Marka</th>
         <th>Model</th>
         <th>Kolor</th>
@@ -35,7 +34,6 @@
 
     <c:forEach var="car" items="${carsList}">
         <tr>
-            <td>${car.id}</td>
             <td>${car.make}</td>
             <td>${car.model}</td>
             <td>${car.color}</td>

@@ -24,7 +24,6 @@
                         </select><br/>
         Data produkcji: <input name="productionDate" /><br/>
         Przebieg startowy: <input name="carMileage" /><br/>
-        Status: <input name="carMileage" /><br/>
         <input type="submit" value="Zapisz">
     </form>
 </body>
