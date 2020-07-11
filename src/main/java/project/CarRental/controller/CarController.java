@@ -40,8 +40,7 @@ public class CarController {
     }
 
     @GetMapping("/editCar")
-    public String editCar(Model model,
-                              @RequestParam("id") Integer id) {
+    public String editCar(Model model, @RequestParam("id") Integer id) {
         CarDto carDto = carService.getCarById(id);
         model.addAttribute("car", carDto);
         return "editCar";
