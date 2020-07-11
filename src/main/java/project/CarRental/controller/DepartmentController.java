@@ -12,11 +12,11 @@ import project.CarRental.service.DepartmentService;
 import java.util.List;
 
 @Controller
-public class DepartmantController {
+public class DepartmentController {
 
     private DepartmentService departmentService;
 
-    public DepartmantController(DepartmentService departmentService) {
+    public DepartmentController(DepartmentService departmentService) {
         this.departmentService = departmentService;
     }
 
