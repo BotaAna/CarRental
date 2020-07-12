@@ -18,8 +18,6 @@
 <a href="/addDepartment">Dodaj oddział</a>
 <table>
     <tr>
-
-        <th>ID</th>
         <th>Adres oddziału</th>
         <th></th>
         <th></th>
@@ -27,7 +25,6 @@
 
     <c:forEach var="department" items="${departmentsList}">
         <tr>
-            <td>${department.id}</td>
             <td>${department.depAddress}</td>
             <td><a href="/deleteDepartment?id=${department.id}">Usuń</a></td>
             <td><a href="/editDepartment?id=${department.id}">Edytuj</a></td>

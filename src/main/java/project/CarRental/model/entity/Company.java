@@ -11,13 +11,15 @@ public class Company {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
+
     private String companyName;
     private String companyDomain;
     private String companyContactAddress;
     private String companyOwner;
     //companyLogotype;
-    //@OneToMany(mappedBy = "department")
-    //private Set<Department> departments = new HashSet<>();
+    //@OneToMany(mappedBy = "company")
+    //private Set<Department> departmentsList = new HashSet<>();
+
 
     public Integer getId() {
         return id;
@@ -59,13 +61,14 @@ public class Company {
         this.companyOwner = companyOwner;
     }
 /*
-    public Set<Department> getDepartments() {
-        return departments;
+    public Set<Department> getDepartmentsList() {
+        return departmentsList;
     }
 
-    public void setDepartments(Set<Department> departments) {
-        this.departments = departments;
+    public void setDepartmentsList(Set<Department> departmentsList) {
+        this.departmentsList = departmentsList;
     }
 
  */
+
 }
