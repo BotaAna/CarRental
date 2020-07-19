@@ -1,5 +1,7 @@
 package project.CarRental.model.entity;
 
+import project.CarRental.model.dto.DepartmentDto;
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 
@@ -17,6 +19,7 @@ public class Car {
     private Integer carMileage;
     private String carStatus;
     private BigDecimal pricePerDay;
+    private String availableInDep;
 
     public Car() {
     }
@@ -91,5 +94,13 @@ public class Car {
 
     public void setPricePerDay(BigDecimal pricePerDay) {
         this.pricePerDay = pricePerDay;
+    }
+
+    public String getAvailableInDep() {
+        return availableInDep;
+    }
+
+    public void setAvailableInDep(String availableInDep) {
+        this.availableInDep = availableInDep;
     }
 }

@@ -11,7 +11,7 @@
     <title>Dodawanie pracownika do bazy</title>
 </head>
 <body>
-    <h1>Dodaj auto</h1>
+    <h1>Dodaj pracownika</h1>
     <form method="post" action="/addEmployee">
         Imię: <input name="name" /><br/>
         Nazwisko: <input name="surname" /><br/>

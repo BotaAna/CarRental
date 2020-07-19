@@ -30,6 +30,18 @@ public class CarService {
         return result;
     }
 
+    public List<CarDto> getCarsbyDepartmet(String department) {
+        Iterable<Car> carsList = carRepository.findAll();
+        ArrayList<CarDto> result = new ArrayList<>();
+        for(Car car : carsList) {
+            if (car.getAvailableInDep().equals(department)) {
+                result.add(CarMapper.INSTANCE.carToDto(car));
+            }
+        }
+        return result;
+    }
+
+
     public CarDto getCarById(Integer id) {
         Optional<Car> car = carRepository.findById(id);
         if(car.isPresent()) {

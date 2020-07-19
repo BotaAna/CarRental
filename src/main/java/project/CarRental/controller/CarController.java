@@ -28,6 +28,20 @@ public class CarController {
         return "cars";
     }
 
+    @GetMapping("/carsByDepartment")
+    public String carsByDepartment(Model model, @RequestParam("department") String department) {
+        List<CarDto> cars = carService.getCarsbyDepartmet(department);
+        model.addAttribute("carsList", cars);
+        return "carsByDepartment";
+    }
+
+    @GetMapping("/carsByDepartmentForUser")
+    public String carsByDepartmentForUser(Model model, @RequestParam("department") String department) {
+        List<CarDto> cars = carService.getCarsbyDepartmet(department);
+        model.addAttribute("carsList", cars);
+        return "carsByDepartmentForUser";
+    }
+
     @GetMapping("/addCar")
     public String addCarForm() {
         return "addCar";
@@ -57,4 +71,23 @@ public class CarController {
         carService.deleteCarById(id);
         return "redirect:/cars";
     }
+
+    //przeniesc gdzies indziej
+    @GetMapping("/index")
+    public String index() {
+        return "index";
+    }
+
+    //przeniesc gdzies indziej
+    @GetMapping("/userPanel")
+    public String userPanel() {
+        return "userPanel";
+    }
+
+    //przeniesc gdzies indziej
+    @GetMapping("/adminPanel")
+    public String adminPanel() {
+        return "adminPanel";
+    }
+
 }

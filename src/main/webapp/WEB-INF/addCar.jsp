@@ -20,13 +20,12 @@
         Rodzaj nadwozia: <select name="carBody">
                             <option value="sedan">Sedan</option>
                             <option value="suv">Suv</option>
-                            <option value="estate">Kombi</option>
+                            <option value="wagon">Kombi</option>
                             <option value="cabriolet">Cabriolet</option>
                         </select><br/>
         Data produkcji: <input name="productionDate" /><br/>
         Przebieg startowy: <input name="carMileage" /><br/>
-
-
+        Oddział: <input name ="availableInDep" /><br/>
         <input type="submit" value="Zapisz">
     </form>
 </body>

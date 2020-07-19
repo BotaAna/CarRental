@@ -57,13 +57,13 @@ public class CompanyDto {
         this.companyOwner = companyOwner;
     }
 /*
-    public List<DepartmentDto> getDepartment() {
-        return department;
-    }
+//    public List<DepartmentDto> getDepartment() {
+//        return department;
+//    }
 
-    public void setDepartment(List<DepartmentDto> department) {
-        this.department = department;
-    }
+//    public void setDepartment(List<DepartmentDto> department) {
+//        this.department = department;
+//    }
 
  */
 }

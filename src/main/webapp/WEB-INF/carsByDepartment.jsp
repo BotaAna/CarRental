@@ -9,11 +9,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Auta w bazie</title>
+    <title>Auta w wybranym oddziale</title>
 </head>
 <body>
 
-<h1>Lista aut</h1>
+<h1>Lista aut w danym oddziale</h1>
 
 <a href="/addCar">Dodaj auto</a>
 <table>
@@ -46,6 +46,7 @@
             <td>${car.availableInDep}</td>
             <td><a href="/deleteCar?id=${car.id}">Usuń</a></td>
             <td><a href="/editCar?id=${car.id}">Edytuj</a></td>
+
         </tr>
     </c:forEach>
 </table>

@@ -6,8 +6,15 @@ import project.CarRental.model.dto.DepartmentDto;
 import project.CarRental.model.entity.Company;
 import project.CarRental.model.entity.Department;
 import project.CarRental.model.mappers.DepartmentMapper;
+import project.CarRental.model.dto.CompanyDto;
+import project.CarRental.model.entity.Company;
+import project.CarRental.model.mappers.CompanyMapper;
 import project.CarRental.model.repository.CompanyRepository;
 import project.CarRental.model.repository.DepartmentRepository;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,23 +24,36 @@ import java.util.Optional;
 public class CompanyService {
 
     private CompanyRepository companyRepository;
-    private DepartmentRepository departmentRepository;
 
     @Autowired
-    public CompanyService(CompanyRepository companyRepository, DepartmentRepository departmentRepository) {
+    public CompanyService(CompanyRepository companyRepository) {
         this.companyRepository = companyRepository;
-        this.departmentRepository = departmentRepository;
     }
 
-    public List<DepartmentDto> getAllDepartment() {
-        Iterable<Department> departmentsList = departmentRepository.findAll();
-        ArrayList<DepartmentDto> result = new ArrayList<>();
-        for(Department department : departmentsList) {
-            result.add(DepartmentMapper.INSTANCE.departmentToDto(department));
+    public List<CompanyDto> getAllCompanies() {
+        Iterable<Company> companiesList = companyRepository.findAll();
+        ArrayList<CompanyDto> result = new ArrayList<>();
+        for(Company company : companiesList) {
+            result.add(CompanyMapper.INSTANCE.companyToDto(company));
         }
         return result;
     }
 
+    public CompanyDto getCompanyById(Integer id) {
+        Optional<Company> company = companyRepository.findById(id);
+        if(company.isPresent()) {
+            return CompanyMapper.INSTANCE.companyToDto(company.get());
+        }
+        return null;
+    }
 
+    public void saveCompany(CompanyDto companyDto) {
+        Company company = CompanyMapper.INSTANCE.dtoToCompany(companyDto);
+        companyRepository.save(company);
+    }
+
+    public void deleteCompanyById(Integer id) {
+        companyRepository.deleteById(id);
+    }
 
 }
