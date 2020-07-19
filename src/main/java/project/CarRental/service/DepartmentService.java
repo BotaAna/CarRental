@@ -8,6 +8,9 @@ import project.CarRental.model.entity.Car;
 import project.CarRental.model.entity.Department;
 import project.CarRental.model.mappers.CarMapper;
 import project.CarRental.model.mappers.DepartmentMapper;
+import project.CarRental.model.dto.DepartmentDto;
+import project.CarRental.model.entity.Department;
+import project.CarRental.model.mappers.DepartmentMapper;
 import project.CarRental.model.repository.DepartmentRepository;
 
 import java.util.ArrayList;
