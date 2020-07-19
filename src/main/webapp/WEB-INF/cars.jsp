@@ -43,7 +43,7 @@
             <td>${car.carMileage}</td>
             <td>${car.carStatus}</td>
             <td>${car.pricePerDay}</td>
-            <td>${car.availableInDep}</td>
+            <td>${car.department.depAddress}</td>
             <td><a href="/deleteCar?id=${car.id}">Usuń</a></td>
             <td><a href="/editCar?id=${car.id}">Edytuj</a></td>
         </tr>

@@ -1,6 +1,7 @@
 package project.CarRental.model.entity;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Department {
@@ -14,6 +15,16 @@ public class Department {
     @JoinColumn(name = "company_id")
     private Company company;
 
+    public List<Car> getCars() {
+        return cars;
+    }
+
+    public void setCars(List<Car> cars) {
+        this.cars = cars;
+    }
+
+    @OneToMany
+    private List<Car> cars;
 
 
     //private List<EmployeeDto> depEmployees = Collections.emptyList();

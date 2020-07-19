@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -23,7 +24,7 @@
         Oddział:
         <select name="availableInDep">
             <c:forEach items="${departmentsList}" var="department">
-                <option value="${department.depAddress}">${department.depAddress}</option>
+                <option value="${department.id}">${department.depAddress}</option>
             </c:forEach>
         </select> </br>
         <input type name="id" value="${car.id}">

@@ -13,7 +13,8 @@ public class CarDto {
     private Integer carMileage;
     private String carStatus;
     private BigDecimal pricePerDay;
-    private String availableInDep;
+    private Integer availableInDep;
+    private DepartmentDto department;
 
     public CarDto() {
     }
@@ -90,11 +91,19 @@ public class CarDto {
         this.pricePerDay = pricePerDay;
     }
 
-    public String getAvailableInDep() {
+    public Integer getAvailableInDep() {
         return availableInDep;
     }
 
-    public void setAvailableInDep(String availableInDep) {
+    public void setAvailableInDep(Integer availableInDep) {
         this.availableInDep = availableInDep;
+    }
+
+    public DepartmentDto getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(DepartmentDto department) {
+        this.department = department;
     }
 }

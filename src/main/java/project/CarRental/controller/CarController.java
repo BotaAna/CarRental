@@ -8,7 +8,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import project.CarRental.model.dto.CarDto;
+import project.CarRental.model.dto.DepartmentDto;
 import project.CarRental.service.CarService;
+import project.CarRental.service.DepartmentService;
 
 import java.util.List;
 
@@ -16,9 +18,11 @@ import java.util.List;
 public class CarController {
 
     private CarService carService;
+    private DepartmentService departmentService;
 
-    public CarController(CarService carService) {
+    public CarController(CarService carService, DepartmentService departmentService) {
         this.carService = carService;
+        this.departmentService = departmentService;
     }
 
     @GetMapping("/cars")
@@ -28,19 +32,19 @@ public class CarController {
         return "cars";
     }
 
-    @GetMapping("/carsByDepartment")
-    public String carsByDepartment(Model model, @RequestParam("department") String department) {
-        List<CarDto> cars = carService.getCarsbyDepartmet(department);
-        model.addAttribute("carsList", cars);
-        return "carsByDepartment";
-    }
-
-    @GetMapping("/carsByDepartmentForUser")
-    public String carsByDepartmentForUser(Model model, @RequestParam("department") String department) {
-        List<CarDto> cars = carService.getCarsbyDepartmet(department);
-        model.addAttribute("carsList", cars);
-        return "carsByDepartmentForUser";
-    }
+//    @GetMapping("/carsByDepartment")
+//    public String carsByDepartment(Model model, @RequestParam("department") String department) {
+//        List<CarDto> cars = carService.getCarsbyDepartmet(department);
+//        model.addAttribute("carsList", cars);
+//        return "carsByDepartment";
+//    }
+//
+//    @GetMapping("/carsByDepartmentForUser")
+//    public String carsByDepartmentForUser(Model model, @RequestParam("department") String department) {
+//        List<CarDto> cars = carService.getCarsbyDepartmet(department);
+//        model.addAttribute("carsList", cars);
+//        return "carsByDepartmentForUser";
+//    }
 
     @GetMapping("/addCar")
     public String addCarForm() {
@@ -57,6 +61,8 @@ public class CarController {
     public String editCar(Model model, @RequestParam("id") Integer id) {
         CarDto carDto = carService.getCarById(id);
         model.addAttribute("car", carDto);
+        List<DepartmentDto> departments = departmentService.getAllDepartments();
+        model.addAttribute("departmentsList", departments);
         return "editCar";
     }
 

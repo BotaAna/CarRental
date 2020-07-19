@@ -19,7 +19,10 @@ public class Car {
     private Integer carMileage;
     private String carStatus;
     private BigDecimal pricePerDay;
-    private String availableInDep;
+    //    private String availableInDep;
+    @ManyToOne
+    private Department department;
+
 
     public Car() {
     }
@@ -96,11 +99,19 @@ public class Car {
         this.pricePerDay = pricePerDay;
     }
 
-    public String getAvailableInDep() {
-        return availableInDep;
+    public Department getDepartment() {
+        return department;
     }
 
-    public void setAvailableInDep(String availableInDep) {
-        this.availableInDep = availableInDep;
+    public void setDepartment(Department department) {
+        this.department = department;
     }
+
+//    public String getAvailableInDep() {
+//        return availableInDep;
+//    }
+//
+//    public void setAvailableInDep(String availableInDep) {
+//        this.availableInDep = availableInDep;
+//    }
 }
